@@ -44,7 +44,7 @@ const storage = multer.diskStorage({
         const playlist = await getLocalPlaylist(targetFile);
     
         const results = playlist && getCategory(playlist);
-    
+        console.log(results)
         res.status(200).send(results);
       } catch (error: any) {
         res.status(error.statusCode).send(error.message);
